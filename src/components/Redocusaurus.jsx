@@ -1,8 +1,14 @@
+import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import React from 'react';
 import merge from 'lodash.merge';
-import { RedocStandalone } from 'redoc';
 import useThemeContext from '@theme/hooks/useThemeContext';
 import styles from "./styles.module.css";
+
+
+let RedocStandalone = () => <div></div>;
+if (ExecutionEnvironment.canUseDOM) {
+  RedocStandalone = require('redoc').RedocStandalone;
+}
 
 /**
  * NOTE: Colors taken from `node_modules/infima/styles/common/dark-mode.css`

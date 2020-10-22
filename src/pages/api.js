@@ -8,7 +8,7 @@ function APIDocs() {
     title={`API Docs`}
     description={`Open API Reference Docs for the API`}
   >
-    <Redocusaurus spec="https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v2.0/yaml/petstore.yaml" />
+    <Redocusaurus spec="/openapiTest.yaml" />
   </Layout>
   );
 }
